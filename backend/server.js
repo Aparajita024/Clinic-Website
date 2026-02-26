@@ -1,3 +1,11 @@
+process.on("uncaughtException", (err) => {
+  console.error("UNCAUGHT EXCEPTION:", err);
+});
+
+process.on("unhandledRejection", (err) => {
+  console.error("UNHANDLED REJECTION:", err);
+});
+
 // Main Express server bootstrap with security, routing, and error handling.
 const express = require('express');
 const cors = require('cors');
